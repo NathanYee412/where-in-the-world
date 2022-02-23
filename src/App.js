@@ -27,15 +27,16 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {data.slice(0,20).map((country) => {
-
+      <div className='CountryCards'>
+        {data.slice(0,20).map((country) => {
         console.log(country.capital);
-        return(
-          <CountryCard img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
-        );
-      })
-
-      }
+          return(
+            <CountryCard img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
+          );
+        })
+        }
+      </div>
+      
     </div>
   );
 }

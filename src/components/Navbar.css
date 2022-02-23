@@ -18,15 +18,15 @@ button:focus{
 .Navbar {
     background-color: #2b3743;
     columns: 2;
-    padding: 6% 6%;
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
 }
-
 
 .NavTitle {
     margin: 0;
     color: white;
     text-align: left;
-    font-size: 1rem;
+    font-size: 100%;
 }
 
 .DarkModeButton {
