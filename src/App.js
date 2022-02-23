@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import CountryCard from './components/CountryCard';
+import axios from 'axios';
 
 function App() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData()
+  }, []);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(`https://restcountries.com/v3.1/all`);
+      const data = await response;
+
+      setData(data.data);
+      console.log(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {data.slice(0,20).map((country) => {
+
+        console.log(country.capital);
+        return(
+          <CountryCard img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
+        );
+      })
+
+      }
     </div>
   );
 }
