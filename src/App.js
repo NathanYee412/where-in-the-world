@@ -27,8 +27,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <CardGrid data={data} />
-      
+      <CardGrid data={data} filter={20} />
     </div>
   );
 }

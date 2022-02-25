@@ -1,13 +1,25 @@
 .Card {
     background-color: #2b3743;
     width: 320px;
+    height: 450px;
     border-top: 3%;
     color: white;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    margin-top: 0px;
-    height: 410px;
+    margin-top: 2rem;
+
+    border-radius: 2%;
+}
+
+.CountryName {
+    font-size: 1.5rem;
+    margin-top: 13.5rem;
+}
+
+.Info {
+    padding: 20px 30px;
+    font-size: 0.8rem;
 }
 
 .Flag {
@@ -15,4 +27,10 @@
     width: 320px;
     height: 210px;
     object-fit: cover;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+.Stats {
+    font-weight: bold;
 }
