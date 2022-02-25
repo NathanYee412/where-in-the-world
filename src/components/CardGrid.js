@@ -19,14 +19,17 @@ function CardGrid(props) {
             <div className='CountryCards'>
             {
             data.map((country) => { 
+
+                console.log(country.capital);
+
                 if(searchTerm === '') {
                     return(
-                        <CountryCard key={country.cca2} img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
+                        <CountryCard key={country.cca2} img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital={country.capital} />
                     );  
                 }
                 if(country.name.common === searchTerm) {
                     return(
-                        <CountryCard key={country.cca2} img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
+                        <CountryCard key={country.cca2} img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital={country.capital} />
                     );
                 }
 
