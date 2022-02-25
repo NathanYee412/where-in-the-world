@@ -1,0 +1,22 @@
+.CountryCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1320px) {
+    .CountryCards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .CountryCards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .CountryCards {
+        grid-template-columns: 1fr;
+    }
+}

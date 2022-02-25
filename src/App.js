@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import CountryCard from './components/CountryCard';
+import CardGrid from './components/CardGrid';
 import axios from 'axios';
 
 function App() {
@@ -27,15 +27,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className='CountryCards'>
-        {data.slice(0,20).map((country) => {
-        console.log(country.capital);
-          return(
-            <CountryCard img={country.flags.png} countryName={country.name.common} population={country.population} region={country.region} capital="None" />
-          );
-        })
-        }
-      </div>
+      <CardGrid data={data} />
       
     </div>
   );

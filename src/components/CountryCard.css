@@ -3,4 +3,16 @@
     width: 320px;
     border-top: 3%;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 0px;
+    height: 410px;
+}
+
+.Flag {
+    float: left;
+    width: 320px;
+    height: 210px;
+    object-fit: cover;
 }
